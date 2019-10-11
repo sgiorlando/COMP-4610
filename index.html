@@ -1,14 +1,132 @@
+<!--
+    FILE: /~sgiorlan/sgiorlan_assign4.html
+    91.61 GUI Programming I Assignment No.2: Creating Your First Webpage
+    Scott T. Giorlando, UMass Lowell Computer Science, scott_giorlando@student.uml.edu
+    File Created on: 10/6/2019 5:19 PM.
+        Updated by STG on 10/9/2019 6:06 PM
+
+    File Description: This file is a simple webpage that
+    serves as an introducton of myself.  It has been enhanced with
+    various styles of css that I have learned so far.  When you click on each
+    assignment it should redirect the user to a page with the assignment I've done
+    or the page will have a title of "Work In Progress" and have some prompt like a 404
+    error page.
+
+    This file did pass both validators that were given in
+    the assignment specification.
+-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>sgiorlando's COMP-44610 Page</title>
+    <title>Scott's Assignment Index</title>
+    <link href="css/hw4stylesheet.css" rel="stylesheet">
+    <!--script src="script.js"></script!-->
   </head>
   <body>
-	  <h1> Welcome to my Github repository!</h1>
-          <!-- I got this from https://github.blog/2008-12-19-github-ribbons/ !-->  
-          <a href="https://github.com/sgiorlando/COMP-4610"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    <!-- page content -->
+    <h1>Welcome to Scott's Index Page!</h1>
+
+    <!-- Added a navigation bar that appears under the main header.  When you click on a specific section you should be jumped
+        to that section. I learned this on W3schools under the navigation section. !-->
+    <div class="navbar">
+        <a href="#aboutme">About Me</a>
+        <a href="#hobbiesandskills">Hobbies And Skills</a>
+        <a href="#classes">My Classes</a>
+        <a href="#assignmentintro">Assignments</a>
+    </div>
+
+    <!-- I changed my sections into divs, and labeled this one "aboutme".  I read up about divs on W3schools and in the textbook so I figured it would be easier
+      to do my css if I labeled everything specifically.  The content inside is essentially the same as before.-->
+    <div id="aboutme">
+        <h4>About Me:</h4>
+        <p>
+          Hi!  My name is Scott Giorlando! <br>
+          I am a 22 year old senior currently enrolled in the Computer Science program at UMass Lowell.
+          This semester <strong>(Fall 2019)</strong> is supposed to be my last semester in my Bachelor's program.
+          I intend on graduating with a Bachelor's in Science for Computer Science and a Minor in Mathematics.
+        </p>
+        <p>
+          I'm glad I was able to catch GUI 1 in my time at UMass, because I am interested in web development.
+          I have never done anything involving coding in HTML.
+          However, I previously worked in the IT department at a company called <strong>Massachusetts Health and Hospital Association</strong> (MHA)
+          and I helped a fellow colleague make changes to MHA's websites by inspecting the sources and finding errors.
+          So I have seen a few things in HTML and CSS before, but I've never actually done anything myself.
+        </p>
+    </div>
+
+    <!-- I changed my sections into divs, and labeled this one "hobbiesandskills".  The content about me has not changed too much. -->
+    <div id="hobbiesandskills">
+        <h4>Hobbies and Skills:</h4>
+        <p>
+          Outside of class I usually like to play Video Games or watch some movies or TV shows.
+          That is not all I do outside of school though.
+        </p>
+        <p>
+          I also know how to play Viola.
+          A Viola is <em>a lower toned Violin</em>, so essentially it's more bassy which means it has lower pitched sounds than a regular Violin can reach,
+          but it has a higher pitch than a Cello or Bass.  I have known how to play a Viola since 4<sup>th</sup> grade,
+          but I haven't really played it regularly since Freshmen year of highschool.
+          I have tried picking it up again a few times but I'm not nearly as good as I used to be.  I personally feel like broadening my horizon of instruments
+          at some point in the future.  I intend on learning how to play guitar as my next instrument.
+        </p>
+
+        <!-- I also made a div for each image I included, and I changed the image of the string family to one of a Viola specifically !-->
+        <div id="stringfamilyimage">
+            <img src="images/viola.jpg" alt="Image showing the viola">
+        </div>
+
+        <p>
+          Another skill from my past is that I know how to assemble and solder different circuits.
+          I know how to do this because I did not attend a regular highschool, I actually went to a Vocational highschool in Billerica MA.
+          It is called <strong>Shawsheen Valley Regional Vocational Technical Highschool</strong>.
+          Everyone calls it <strong>Shawsheen Tech</strong> for short.  A Vocational School is a trade school so most people do not attend a college when they graduate.
+          The trade I chose to do at the Tech was known as <strong>Electronics</strong> which is equivalent to basic <strong>Engineering</strong>.
+          I enjoyed what I did in highschool, and I wanted to originally pursue Computer Engineering as a career.
+          When I graduated I had realized that I was more interested in software versus hardware and Computer Engineering is more hardware than it is software.
+          That is how I ended up in Computer Science, but I do not regret learning what I did in highschool.
+        </p>
+
+        <div id="shawsheentechimage">
+            <img src="images/shawsheentech.jpg" alt="Image of my highschool">
+       </div>
+    </div>
+
+    <!-- List of my classes I'm currently enrolled in.  I created a div and named that "classes". -->
+    <div id="classes">
+        <dl>
+         <dt><b>Classes I'm currently taking:</b></dt>
+            <dd>Calculus 3</dd>
+            <dd>Database 1</dd>
+            <dd>GUI Programming 1</dd>
+            <dd>Machine Learning</dd>
+        </dl>
+    </div>
+
+    <!-- List of my assignments I'm currently doing.  I created a div and named that "assignmentintro".  I also put a section for the user to notice that they will have
+      a new link opened if they choose to click on a specific homework assignment. -->
+    <div id="assignmentintro">
+        <p>Below you will be able to see all of my assignments that I am doing this semester.  <b>NOTE</b> Clicking one of these links <b> will open a new page!</b></p>
+    </div>
+
+    <!-- I removed the color on each header -->
+    <h2>My Assignments:</h2>
+
+    <!-- I created a section navigation section, this one is specific to my assignments that will be done this semester. !-->
+    <nav>
+    <!-- Here I changed my header links to just simple links, they still hold the same premise of redirecting the user.  Except this time I put the links to my
+        assignments I have finished, and the ones not completed are still going to a error page I made. -->
+        <ul>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/assign_error_page.html" target = "_blank">Assignment 1</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/sgiorlan_assign2.html" target = "_blank">Assignment 2</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/Assignment3/index.html" target = "_blank">Assignment 3</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/Assignment4/sgiorlan_assign4.html" target = "_blank">Assignment 4</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/assign_error_page.html" target = "_blank">Assignment 5</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/assign_error_page.html" target = "_blank">Assignment 6</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/assign_error_page.html" target = "_blank">Assignment 7</a></li>
+            <li><a href="http://weblab.cs.uml.edu/~sgiorlan/assign_error_page.html" target = "_blank">Assignment 8</a></li>
+      </ul>
+    </nav>
   </body>
-  </html>
+</html>
 
