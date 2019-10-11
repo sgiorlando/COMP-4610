@@ -1,0 +1,190 @@
+/*
+    FILE: /~sgiorlan/Assignment4/css/hw4stylesheet.css
+    91.61 GUI Programming I Assignment No.2: Creating Your First Webpage
+    Scott T. Giorlando, UMass Lowell Computer Science, scott_giorlando@student.uml.edu
+    File Created on: 10/6/2019 5:19 PM.
+        Updated by STG on 10/9/2019 6:18 PM
+
+    File Description: This file is a stylesheet for my website that I made changes to.
+    This specific file is meant to hold the changes that can be seen when the link is clicked on.
+    Most of the information used on the assignment was on W3schools or in previous work I've done in the class.
+
+    This file did pass the validator that was provided.
+*/
+
+/*
+For my body I went online and found a RGB color picker website and found a shade of red I felt was good to look at.  I made that my background color.
+The rest of the body is essentially changing the format of all the text seen on the webpage.  I added spcacing, padding different margins a new font and different
+widths to the screen so it looks nice.
+*/
+body {
+  background-color: #F26E6E;
+  font-size: 90%;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.15em;
+  min-width: 720px;
+  max-width: 1080px;
+  padding: 20px;
+  margin: auto;
+}
+/*
+For the first header I made it larger than the rest of the headers so the top of the page stands out, I changed the font again and added a border box with bolded
+lines
+*/
+h1 {
+  font-size: 200%;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  text-align: center;
+  border: 4px solid black;
+}
+/*
+This is the first navbar for my page, this was tricky to implement because it wasn't fitting the screen correctly based off my margins and width in the body.
+This bar allows the user to go to a different section of my page by clicking on the specific title.  I made this bar so it was easier to navigate my page.  I read about
+this specific bar on W3schools under the naviagtion section, I originally had it as a bar that stayed fixed on the top of the screen when you scrolled but it was not working
+properly.  I set it to stay within my page boundaries instead.
+*/
+.navbar {
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  top: 0;
+  width: auto;
+}
+/*
+This is the section part of the navbar that you click on.  I had the text stay inline-block so it would be able to be centered in the bar and spread horizontally.
+It appears white when the user sees it regularly.
+*/
+.navbar a {
+ display: inline-block;
+ color: white;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 14px;
+}
+/*
+This is the section part of the navbar that you can click on.  I have it set so the background turns white when a user hovers their mouse over a specific section,
+the text color is black.
+*/
+.navbar a:hover {
+  background: white;
+  color: black;
+}
+/*
+I set the headers of the subsections to be 20 pixels below the top of the previous section.  I set the font size to be larger than the paragraph text but smaller than
+the main header of the page.  I also set these to have double 1 pixel borders that are black.  This is to signify the section for the user on the website.
+*/
+h4 {
+  padding-top: 20px;
+  font-size: 150%;
+  border-bottom: 2px double black;
+}
+/*
+In the aboutme div I changed the width of the section to 80%, had my text centered and my margins set to auto.  This is to format the text so it looks nice and even
+under the specific header.  This is also so it wraps nicely with the body border I set above.
+*/
+#aboutme {
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 600px;
+}
+/*
+In the hobbiesandskills div I changed the width of the section to 80%, had my text centered and my margins set to auto.  This is to format the text so it looks nice and even
+under the specific header.  This is also so it wraps nicely with the body border I set above.
+*/
+#hobbiesandskills {
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 600px;
+}
+/*
+The image I chose here is displayed in block, and it has a margin 20 pixels on the top and bottom, the right and left are auto.  The image appears large, but I prefer it
+that way.
+*/
+#stringfamilyimage {
+  display: block;
+  margin: 20px auto;
+}
+/*
+The image I chose here is displayed in block, and it has a margin 20 pixels on the top and bottom, the right and left are auto.  The image appears large, but I prefer it
+that way.
+*/
+#shawsheentechimage {
+  display: block;
+  margin: 20px auto;
+}
+/*
+For the classes section I set the title of the list to be the same size and orientation of the h4 headers I have for each main section.  I also gave this title a double lined
+black border on the bottom of it to signify the classes section of my page.
+*/
+#classes dt {
+  font-size: 150%;
+  padding-top: 20px;
+  text-align: center;
+  border-bottom: 2px double black;
+}
+/*
+The text below the title follows the same premise of the other paragraphs for each section.
+*/
+#classes dd {
+  width: 80%;
+  padding-top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 600px;
+}
+/*
+This section is formatted for the paragraph I have in the "assignmentintro" div.  This give the text the same font-size, style and orientation as the other paragraphs.
+This also gives a solid single black line below it to signify the assignment section.
+*/
+#assignmentintro {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+/*
+This format of the h2 is the same as the other headers above.
+*/
+h2 {
+  text-align: center;
+  font-size: 150%;
+}
+/*
+This nav bar that holds the links to each assignment on the bottom of the page has a solid black border surrounding it.
+*/
+nav {
+  border: 1px solid black;
+}
+/*
+This sets the links to be displayed side by side and with a 5 pixel spacing on the left and right of each assignment.
+*/
+nav ul li {
+  display: inline;
+  margin: 0px 5px;
+}
+/*
+This sets the color of each link to black and there is no specific background color or text decoration.  (As in no underlines or anything).
+*/
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+/*
+This sets the color of the text on each link to be white when the user hovers their mouse over a specific assignment number.
+*/
+nav ul li a:hover {
+  color: white;
+}
+/*
+This sets the color of the text on each link to be white when the user has their mouse over a specific assignment number.
+*/
+nav ul li a.on {
+  color: white;
+}
